@@ -235,6 +235,7 @@ public class AddJPanel extends javax.swing.JPanel {
         u.setAddress(address);
         u.setCommunity(community);
         u.setCity(city);
+        medSystem.citySet.add(city);
         u.setId(medSystem.numPersons++);
         medSystem.personDirectory.getdirectory().add(u);
         medSystem.personDirectory.personMap.put(u.getId(), u);

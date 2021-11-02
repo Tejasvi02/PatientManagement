@@ -10,5 +10,28 @@ package model;
  * @author kashr
  */
 public class Community {
+    String community;
+    City city;
+
+    public String getCityName() {
+        return city.getCityName();
+    }
+
+    public void setCityName(String cityName) {
+        this.city.setCityName(cityName);
+    }
+    
+    public Community(){
+        city = new City();
+    }
+    
+
+    public String getCommunity() {
+        return community;
+    }
+
+    public void setCommunity(String community) {
+        this.community = community;
+    }
     
 }

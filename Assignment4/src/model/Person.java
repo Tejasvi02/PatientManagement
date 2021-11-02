@@ -12,11 +12,13 @@ package model;
 public class Person {
     private int age ;
     protected boolean isPatient;
-    private String name, address, community, city;
+    private String name;
     int id;
+    House house;
     
     public Person(){
         isPatient = false;
+        house = new House();
     }
 
     public int getId() {
@@ -52,29 +54,30 @@ public class Person {
     }
 
     public String getAddress() {
-        return address;
+        return this.house.getAddress();
     }
 
     public void setAddress(String address) {
-        this.address = address;
+        this.house.setAddress(address);
     }
 
     public String getCommunity() {
-        return community;
+        return this.house.getCommunity();
     }
 
     public void setCommunity(String community) {
-        this.community = community;
+        this.house.setCommunity(community);
     }
 
     public String getCity() {
-        return city;
+        return this.house.getCity();
     }
 
     public void setCity(String city) {
-        this.city = city;
+        this.house.setCity(city);
     }
-      @Override
+    
+    @Override
     public String toString(){
         return name;
     }
